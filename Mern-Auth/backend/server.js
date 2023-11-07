@@ -10,4 +10,8 @@ const app = express();
 app.use('/api/users' ,userRoutes);
 
 app.get('/', (req, res) => res.send('Server is ready to serve'));
+
+app.use(notFound);
+app.use(errorHandler);
+
 app.listen(port, ()=>console.log(`Server is listening on port:${port}`));
