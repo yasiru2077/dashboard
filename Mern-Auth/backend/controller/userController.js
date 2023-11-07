@@ -4,7 +4,7 @@ import asyncHandler from "express-async-handler";
 // @access Public
 const authUser =asyncHandler (async (req, res) => {
     res.status(401);
-    
+    throw new Error('');
     res.status(200).json({message:'Auth User'});
 });
 
