@@ -14,10 +14,28 @@ const registerUser = asyncHandler (async (req, res) => {
 
 });
 
-const LogoutUser = asyncHandler (async (req, res) => {
+const logoutUser = asyncHandler (async (req, res) => {
 
     res.status(200).json({message:'Logout User'});
 
 });
 
-export { authUser };
+const getUserProfile = asyncHandler (async (req, res) => {
+
+    res.status(200).json({message:'User profile'});
+
+});
+
+const updateUserProfile = asyncHandler (async (req, res) => {
+
+    res.status(200).json({message:'Update User profile'});
+
+});
+
+export { 
+    authUser,
+    registerUser,
+    logoutUser,
+    getUserProfile,
+    updateUserProfile
+ };
